@@ -1,0 +1,578 @@
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+
+/*Top of the page CSS/Nav bar*/
+.topbar{
+  position: fixed;
+  background: #b1102b;
+  height: 80px;
+  width: 100%;
+  left: 0;
+  list-style-type: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: large;
+  top: -1px;
+}
+
+#searchbar {
+  position: fixed;
+}
+
+.endOfTop{
+  position:absolute;
+  right: 60px;
+  top: 25px;
+}
+#topnav {
+  /*padding: 5px;*/
+  padding-left: 4%;
+  overflow: hidden;
+}
+
+#topnav li {
+  float: left;
+}
+
+#topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#topnav a:hover:not(.active) {
+  background-color: #13284c;
+  border-radius: 5px;
+}
+
+/*Bottom/footer CSS*/
+.bottombar {
+  display: inline-grid;
+  background-color: #13284c;
+  height: 12vh;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  padding-left: 12%;
+  display: flex;
+}
+
+.bottombar hr {
+  position: fixed;
+  bottom: 95px;
+  overflow: hidden;
+}
+#copyright{
+  position: fixed;
+  bottom: 40px;
+  overflow: hidden;
+  color: whitesmoke;
+  font-family: monospace;
+}
+
+#navtitle, #bottomnav {
+    color: whitesmoke;
+    list-style-type: none;
+    font-family: monospace;
+}
+
+hr.horizontalbar{
+  border: 3px solid whitesmoke;
+  width: 80%;
+  bottom: 70px;
+
+}
+/*CSS that cover the page itself*/
+
+body {
+  background-image: url(campus-arial.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+
+#bottomnav, #copyright, #topnav{
+  list-style-type: none;
+}
+
+.container{
+  display: inline-grid;
+  margin: 0;
+  padding: 5px;
+  margin-top: 79px;
+  width: 100%;
+  min-height: 80vh;
+  height: auto;
+  align-items: center;
+  background-color: white;
+}
+
+
+/* Auto complete ////////////////////////////////////////////////////////////////*/
+form{
+  display: block;
+  height: 300px;
+  overflow-y: auto;
+  z-index: -1;
+}
+
+.autocomplete {
+  /*the container must be positioned relative*/
+  position: relative;
+  display: inline-block;
+}
+
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important;
+  color: white;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container */
+  top: 100%;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
+}
+
+
+
+
+
+/* This is the class info page css ////////////////////////////////////////////////////////////////////////*/
+.flex-container {
+  display: flex;
+  background-color: #ced1d4;
+  width: 900px;
+  min-height: 100%;
+  height: auto;
+  margin: auto;
+  flex-direction: column;
+}
+
+.flex-containerRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-containerRow > div {
+  text-align: center;
+  display: block;
+  overflow: auto;
+  font-size: 20px;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 1px;
+  padding: 2px;
+  font-size: 25px;
+
+}
+
+.tablinks, .profLinks, .tab {
+  color: white;
+  text-align: center;
+  background-color: rgb(19, 40, 76);
+}
+
+.tablinks{
+  width: 33.3%;
+}
+
+.tablinks:hover{
+  background-color: #b1102b !important;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover{
+  background-color: #b1102b;
+}
+
+.classTitle {
+  color: white;
+  width: 30%;
+  text-align: center;
+}
+.classTitle2 {
+  color: black;
+  background-color: white;
+  width: 70%;
+  border-left: 1px solid black;
+}
+
+#classDescript {
+  margin: 0 50px 20px 50px;
+}
+#instructor {
+  margin-left: 40px;
+}
+
+
+
+
+/* This is the professor pages css stuff ///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+h1 {
+  text-align: center;
+  color: black;
+}
+
+h2 {
+  text-align: center;
+  color: yellow;
+}
+
+h3 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.tabContent{
+  align-items: center;
+}
+.upload-icon{
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+  margin-left: calc(50% - 75px);
+  border: 1px solid black;
+}
+
+.profLinks{
+  width: 33.33%;
+}
+
+.profLinks:hover{
+  background-color: #b1102b;
+}
+/*
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+*/
+
+/*
+.container {
+  background-size: cover;
+  background-position: center;
+  max-width: 100px;
+  height: 20vh;
+  margin: auto;
+  position: relative;
+}
+*/
+
+#professor p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/*
+#textBox {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  padding: 10px;
+}
+
+#prevText {
+  position: absolute;
+  left: 50%;
+  bottom: 30%;
+  transform: translateX(-50%);
+  width: 90%;
+  font-size: 32px;
+  text-align: center;
+  text-shadow: 2px 2px 20px #000;
+}
+
+
+.picture {
+  /*   Parent class will make the image of professor go to the center */
+  /*position: relative;
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  border-radius: 1000px;
+  /*Turns the image of professor into a circle*/
+
+/*} */
+
+
+
+
+
+/* Faculty Page CSS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/  
+#faculty{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+  background-color: #ced1d4;
+  margin: auto;
+  border-style: solid;
+  border: 2px solid #b1102b;
+  border-radius: 8px;
+  margin-top: 60px;
+  margin-bottom: 160px;
+  font-size: 18px;
+  /*padding: 5px;*/
+}
+#faculty td, #faculty th{
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#faculty tr:nth-child(even){background-color: whitesmoke;}
+#faculty tr:hover {background-color: #ddd; cursor: pointer;}
+#faculty th {
+/*  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;*/
+  background-color: #b1102b;
+  color: white;
+}
+#pageTitle{
+  text-align: center; color: #000;  margin-top: 80px; background-color: whitesmoke;
+  width: 40%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;} */
+
+/* Style the tab */
+
+.flex-containerAtoZ {
+  display: flex;
+  background-color: #ced1d4;
+  width: 900px;
+  min-height: 80vh;
+  height: auto;
+  margin: auto;
+  flex-direction: row;
+
+}
+
+.flex-containerAtoZ > div {
+  text-align: left;
+  background-color: #f1f1f1;
+  margin: 1px;
+  padding: 2px;
+  font-size: 20px;
+  line-height: 10px;
+}
+
+.flex-containerAtoZ:hover{
+  background-color: #ccc;
+}
+
+.flexTab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 7%;
+  height: 80vh;
+  overflow-y: scroll;
+}
+
+
+
+
+/* Style the buttons inside the tab */
+.flexTab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 20px;
+}
+
+/* Change background color of buttons on hover */
+.flexTab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.flexTab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabDepartmentContent {
+  right:0;
+  /* padding: 0px 12px; */
+  border: 1px solid #ccc;
+  width: 100%;
+  border-left: none;
+  height: 80vh;
+  overflow-y: scroll;
+}
+
+.tabDepartmentContent p:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.tabDepartmentContent h3 {
+  text-align: left;
+}
+.tabDepartmentContent p{
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* Home Page CSS*/
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: 50% auto;
+  background-color: rgb(174, 172, 172);
+  border-style: hidden;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0 5px 0 5px;
+  font-size: 20px;
+  
+}
+
+#stockPhoto {
+  width: 100%;
+  height: 667px;
+  background-image: url('classroomStocksmol.png');
+  background-repeat: no-repeat;
+}
+
+
+
+.PartOfClassList:hover{
+  cursor: pointer;
+}
+
+
+
+
+
+
+/*Styling for the About us page*/
+#aboutUsPic1{
+  width: 100px;
+  height: 100px;
+  border: 1px black solid;
+}
+
+#aboutUsPic1{
+  cursor: pointer;
+}
+
+#fakeGrid{
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+}
+
+#fakeGrid h1{
+  font-size: 32px;
+}
+
+#fakeGrid p, #fakeGrid ul li {
+  font-size: 20px;
+}
+
+#fakeGrid #aboutPerson{
+  width: 50%;
+}
+#fakeGrid .aboutUsPicOne{
+  width: 50%;
+}
+
+#AboutUsPic2{
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#AboutUsContributions {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#fakeGrid #aboutCons{
+  width: 30%;
+}
+
+#AboutUsContributions li{
+  margin-bottom: 20px;
+}

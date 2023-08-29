@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--When possible, keep this page pure HTML only unless functionality requires inline scirpting.-->
+<title>
+  Fresno State Class Info
+</title>
+
+<head>
+  <!--External CSS style sheet-->
+  <link rel="stylesheet" href="styles.css">
+  <script src="DataBase4Classes\allCsciData.js"></script>
+  <script src="DataBase4Classes\allCsciProfData.js"></script>
+  <script src="scripts.js"></script>
+  <script src="DataBase4Classes\DepartmentNames.js"></script>
+  <script src="DataBase4Classes\aboutUs.js"></script>
+</head>
+<!--Start of main body-->
+
+<body>
+  <!--Top Navigation Bar as an unordered list-->
+  <div class="topbar">
+    <div>
+      <ul id="topnav">
+        <li><a href="index.html"><img src = "FSCI-Logo.png" style="display: block; width: 100px; height: 25px"></a></li>
+        <li><a onclick="aboutUs()">About Us</a></li>
+        <!-- href="CSCIcoursepage.html" -->
+        <li><a onclick = "loadDepartmentAtoZ()">Departments</a></li>
+        <li><a onclick = "displayFacultyPage()">Faculty</a></li>
+        <!--Search bar and 'Go' button-->
+      </ul>
+      <div class="endOfTop">
+        <button type="submit" style="float: right; margin-left: 15px;" onclick="findSearch()">Go</button>
+        <form id="searchClasses" autocomplete="off">
+          <div class="autocomplete">
+            <input id="searchBar" style="overflow: visible;" type="text" name="Search" placeholder="Search">
+          </div>
+        </form>
+        <script>autocomplete(document.getElementById("searchBar"), allCSCINames);</script>
+      </div>
+    </div>
+  </div>
+  <!--insert main page code starting here-->
+  <div class="container" id="container">
+    <div class="grid-container">
+      <div>
+          <section>
+            <h1>Fresno State Class Info</h1>
+            <p style="padding: 0 30px 0 30px;">Welcome to Fresno State Class Info (FSCI), our goal is to help you better understand Fresno State's class offerings. This website is intended for Future as well as Current students. The information provided here can assist students in at least these ways:
+            </p>
+            <ul>
+                <li>Better inform students on which electives to choose.</li>
+                <li>Which classes are complementary and/or relavent in the work force.</li>
+                <li>Inform which courses staisfy graduation requirements.</li>
+                <li>Provide additional background information, and resources on the course and instructor.</li>
+            </ul>
+          </section>
+      </div>
+      <div id="stockPhoto"></div>   
+  </div>
+</article>
+  </div>
+  <!--External Javascript
+        <script src="scripts.js"></script>-->
+  <script src="DataBase4Classes\functions.js"></script>
+  <script src="scripts.js"></script>
+</body>
+<!--Footer/Bottom of page-->
+<footer>
+  <div class="bottombar">
+    <!--Footer navigation-->
+    <p id="navtitle">Welcome to the Home Page:</p>
+    <ul id="bottomnav">
+      <li>Search classes with the buttons</li>
+    </ul>
+    <ul id="bottomnav">
+      <li>Search classes by professor</li>
+    </ul>
+    <ul id="bottomnav">
+      <li>Search classes by departments</li>
+    </ul>
+    <!--Copyright year-->
+    <div id="bottomnav" style="display: inline-grid;float: left; margin-top: 13px;margin-bottom: 13px; margin-left: 40px;">
+      <script>document.write(new Date().getFullYear())</script>&#169; FSCI, All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+</html>
